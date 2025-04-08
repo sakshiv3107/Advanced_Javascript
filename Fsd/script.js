@@ -61,12 +61,30 @@
 // let arr=[10,20]
 // addNumbers(...arr);
 
-function someFunction(para1,para2){
-    console.log(para1,para2);
-}
-someFunction(1,2,3,4,5); 
+// function someFunction(para1,para2){
+//     console.log(para1,para2);
+// }
+// someFunction(1,2,3,4,5); 
 
-function someFunction(para1,...para2){
-    console.log(para1,para2);
-}
-someFunction(1,2,3,4,5); 
+// function someFunction(para1,...para2){
+//     console.log(para1,para2);
+// }
+// someFunction(1,2,3,4,5); 
+
+// let favouritesubject=prompt("Enter your favourite subject");
+
+
+// let addTwoNumbers=(x,y) => x+y;
+
+// let resultarr=[];
+// for(let i=0;i<10;i++){
+//     let result=addTwoNumbers(i,2*i);
+//     resultarr.push(result);
+// }
+// console.log(resultarr);
+
+
+
+// Returning with arrow function
+
+let addTwoNumbers=(x,y) => x+y;
