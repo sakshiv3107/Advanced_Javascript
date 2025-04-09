@@ -87,4 +87,120 @@
 
 // Returning with arrow function
 
-let addTwoNumbers=(x,y) => x+y;
+// let addTwoNumbers=(x,y) => x+y;
+
+// Variable SCope in Function
+
+// function testAvailablity(x){
+//     console.log("Inside function",x); // x is not defined here
+// }
+// testAvailablity("Hi!")
+// // console.log("Outside function",x); // x is not defined here
+
+// function testAvailablity(x){
+//     let y=10; // y is defined here
+//     console.log("Inside function",y); // y is not defined here
+//     return y;
+// }
+// let z=testAvailablity();
+// console.log("Outside function",z); // y is not defined here
+// console.log("Not available:",y); 
+
+// function doingStuff(){
+//     if(true){
+//         var x="Local";
+//     }
+//     console.log("Inside function",x); // x is defined here
+// }
+// doingStuff();
+// console.log("Outside function",x); // x is not defined here
+
+// function doingStuff(){
+//     if(true){
+//         console.log("Inside function",x); 
+//         var x="Local"; 
+//         // let x="Local"; // This will throw an error because x is not defined here
+//     }
+// }
+// doingStuff();
+
+// // Const Scope Same as let scope
+// function doingStuff(){
+//     if(true){
+//         const x="Local";
+//     }
+//     console.log("Inside function",x); // x is not defined here
+// }
+// doingStuff();
+
+// let globalVar="Accesible EVerywhere"; // Global variable
+// console.log("Global variable",globalVar); // Global variable
+
+// function creaingNewScope(x){
+//     console.log("Access to global vars inside function",globalVar); 
+// }
+// creaingNewScope("Local variable"); // Local variable
+// console.log("Access to global vars outside function",globalVar); 
+
+// let x="Global";
+// function doingStuff(){
+//     let x="Local"; // Local variable
+//     console.log("Inside function",x); // Local variable
+// }
+// doingStuff(); // Local variable
+// console.log("Outside function",x); // Global variable
+
+// let x="Global";
+// function doingStuff(){
+//     x="Local"; // Local variable
+//     console.log("Inside function",x); // Local variable
+// }
+// doingStuff(); // Local variable
+// console.log("Outside function",x); // Global variable
+
+// let x="Global";
+// function doingStuff(x){
+//     console.log("Inside function",x); // Local variable
+// }
+// doingStuff("Local"); // Local variable
+
+// function confuseReader(){
+//     x="Guess my scope";
+//     console.log("Inside function",x); // Local variable
+// }
+// confuseReader();
+// console.log("Outside function",x); // Global variable
+
+//immediately invoked function expression (IIFE) is a function that is executed as soon as it is defined. It is a common pattern in JavaScript to create a new scope and avoid polluting the global scope.
+
+// (function(){
+//     console.log("I am an IIFE"); // Local variable
+// })();
+
+// (function(x,y){
+//     console.log("Sum is:",x+y); // Local variable
+// })(10,5);
+
+// (()=> {
+//     console.log("I am an IIFE"); // Local variable
+// })();
+
+//Recursive functions
+
+// function getRecusive(nr){
+//     console.log(nr);
+//     if(nr>0)
+//     getRecusive(--nr); // Recursive function
+
+// }
+// getRecusive(3);
+
+function logRecursive(nr){
+    console.log(nr);
+    if(nr>0)
+    logRecursive(--nr); 
+    else
+    console.log("End of recursion"); // Base case
+console.log("End of recursion",nr); 
+}
+logRecursive(3);
