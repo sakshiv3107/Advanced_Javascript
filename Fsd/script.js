@@ -190,17 +190,82 @@
 // function getRecusive(nr){
 //     console.log(nr);
 //     if(nr>0)
-//     getRecusive(--nr); // Recursive function
+//         getRecusive(--nr); // Recursive function
 
 // }
 // getRecusive(3);
 
-function logRecursive(nr){
-    console.log(nr);
-    if(nr>0)
-    logRecursive(--nr); 
-    else
-    console.log("End of recursion"); // Base case
-console.log("End of recursion",nr); 
-}
-logRecursive(3);
+
+// function getRecusive(nr){
+//     if(nr>0)
+//         getRecusive(--nr); // Recursive function
+//     console.log(nr);
+
+// }
+// getRecusive(3);
+
+// function logRecursive(nr){
+//     console.log("Started Function ",nr); 
+//     // console.log(nr);
+//     if(nr>0)
+//     logRecursive(--nr); 
+//     else
+//     console.log("Done with recursion"); // Base case
+//     console.log("End of recursion",nr); 
+// }
+// logRecursive(3);
+
+// function doOuterFunctionStuff(nr){
+//     console.log("Outer Function "); 
+//     doInnerFunctionStuff(nr);
+//     function doInnerFunctionStuff(x){
+//         console.log(x+7  );
+//         console.log("I can access outer variable ", nr);
+//       }
+// }
+// doOuterFunctionStuff(3); // Outer Function
+
+//Anonymous functions
+
+// function doingStuffAnonymous(){
+//     console.log("Doing stuff anonymous function"); 
+// }
+// doingStuffAnonymous(); 
+
+// let functionVaribale=function(){
+//     console.log("Not so secret though"); 
+// }
+// // functionVaribale(); 
+
+// function doFlexibleStuff(executestuff){
+//     executestuff(); 
+//     console.log("Doing stuff"); 
+// }
+// doFlexibleStuff(functionVaribale); 
+
+// let youGotThis=function(){
+//     console.log("You got this"); 
+// }
+// // setTimeout(youGotThis,4000); // setTimeout is used to execute a function after a specified number of milliseconds.
+// setInterval(youGotThis,1000); // setInterval is used to execute a function repeatedly at specified intervals of time.
+
+// let testFunction=function(){
+//     console.log("Test function"); 
+// }(); // IIFE
+
+(function(){
+    console.log("Welcome");
+})();
+(function(){
+    let firstName="John";
+})();
+let result= (function(){
+    let firstName="John";
+    return firstName;
+})();
+console.log(result); // John
+(function(firstName){
+    console.log("My name is "+firstName);
+})("John");
+
+
