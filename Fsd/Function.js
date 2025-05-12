@@ -253,19 +253,18 @@
 //     console.log("Test function"); 
 // }(); // IIFE
 
-(function(){
-    console.log("Welcome");
-})();
-(function(){
-    let firstName="John";
-})();
-let result= (function(){
-    let firstName="John";
-    return firstName;
-})();
-console.log(result); // John
-(function(firstName){
-    console.log("My name is "+firstName);
-})("John");
-
+// (function(){
+//     console.log("Welcome");
+// })();
+// (function(){
+//     let firstName="John";
+// })();
+// let result= (function(){
+//     let firstName="John";
+//     return firstName;
+// })();
+// console.log(result); // John
+// (function(firstName){
+//     console.log("My name is "+firstName);
+// })("John");
 
